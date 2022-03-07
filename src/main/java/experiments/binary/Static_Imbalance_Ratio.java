@@ -2,7 +2,7 @@ package experiments.binary;
 
 import utils.Utils;
 
-public class Static_IR {
+public class Static_Imbalance_Ratio {
 
 	public static void main(String[] args) throws Exception {
 
@@ -116,12 +116,14 @@ public class Static_IR {
 		for(int alg = 0; alg < algorithms.length; alg++)
 			algorithmsFilename[alg] = algorithms[alg].replaceAll(" ", "").replaceAll("moa.classifiers.meta.imbalanced.", "").replaceAll("moa.classifiers.meta.", "").replaceAll("moa.classifiers.trees.", "").replaceAll("moa.classifiers.ann.meta.", "").replaceAll("moa.classifiers.active.", "").replaceAll("[()]", "");
 
+		
+		String resultsPath = "D:/DataStreams-Imbalanced/static_IR/";
 
+		// Executables
 		System.out.println("===== Executables =====");
 		for(int gen = 0; gen < generators.length; gen++) {
 			for(int alg = 0; alg < algorithms.length; alg++) {
 				String VMargs = "-Xms8g -Xmx1024g";
-
 				String jarFile = "target/imbalanced-streams-1.0-jar-with-dependencies.jar";
 
 				System.out.println("java " + VMargs + " -javaagent:sizeofag-1.0.4.jar -cp " + jarFile + " "
@@ -130,13 +132,12 @@ public class Static_IR {
 						+ " -s \"(" + generators[gen] + ")\"" 
 						+ " -l \"(" + algorithms[alg] + ")\""
 						+ " -i 200000 -f 500"
-						+ " -d results/static_IR/" + algorithmsFilename[alg] + "-" + generatorsFilename[gen] + ".csv");
+						+ " -d " + resultsPath + algorithmsFilename[alg] + "-" + generatorsFilename[gen] + ".csv");
 			}
 		}
 
 		// Show metrics for results
 		System.out.println("===== Results =====");
-		String resultsPath =  "D:/DataStreams-Imbalanced/AUC/static_IR/";
 		
 		Utils.metric("Kappa", "averaged", resultsPath, algorithmsFilename, generatorsFilename);
 		Utils.metric("G-Mean", "averaged", resultsPath, algorithmsFilename, generatorsFilename);
