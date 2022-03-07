@@ -5,6 +5,8 @@ import utils.Utils;
 public class Semisynthetic {
 
 	public static void main(String[] args) throws Exception {
+		
+		// Download datasets from https://drive.google.com/file/d/1WogmLnHrBL3zdExegZJAl-nxuO6NCVxZ/view?usp=sharing
 
 		String[] datasets = new String[] {
 				"ACTIVITY-D1",

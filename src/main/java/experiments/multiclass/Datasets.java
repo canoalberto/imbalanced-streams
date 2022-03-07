@@ -5,6 +5,8 @@ import utils.Utils;
 public class Datasets {
 
 	public static void main(String[] args) throws Exception {
+		
+		// Download datasets from https://drive.google.com/file/d/19F7krux2PnhFJzM7lOwNOLT26NHnZXbo/view?usp=sharing
 
 		String[] datasets = new String[] {
 				"activity",
