@@ -246,7 +246,7 @@ public class Dynamic_Imbalance_Ratio_Increasing {
 		for(int alg = 0; alg < algorithms.length; alg++)
 			algorithmsFilename[alg] = algorithms[alg].replaceAll(" ", "").replaceAll("moa.classifiers.meta.imbalanced.", "").replaceAll("moa.classifiers.meta.", "").replaceAll("moa.classifiers.trees.", "").replaceAll("moa.classifiers.ann.meta.", "").replaceAll("moa.classifiers.active.", "").replaceAll("[()]", "");
 
-		String resultsPath = "D:/DataStreams-Imbalanced/increasing_IR/";
+		String resultsPath = "D:/DataStreams-Imbalanced/binary/increasing_IR/";
 
 		// Executables
 		System.out.println("===== Executables =====");

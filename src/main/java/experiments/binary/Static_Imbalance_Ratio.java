@@ -117,7 +117,7 @@ public class Static_Imbalance_Ratio {
 			algorithmsFilename[alg] = algorithms[alg].replaceAll(" ", "").replaceAll("moa.classifiers.meta.imbalanced.", "").replaceAll("moa.classifiers.meta.", "").replaceAll("moa.classifiers.trees.", "").replaceAll("moa.classifiers.ann.meta.", "").replaceAll("moa.classifiers.active.", "").replaceAll("[()]", "");
 
 		
-		String resultsPath = "D:/DataStreams-Imbalanced/static_IR/";
+		String resultsPath = "D:/DataStreams-Imbalanced/binary/static_IR/";
 
 		// Executables
 		System.out.println("===== Executables =====");

@@ -887,7 +887,7 @@ public class Dynamic_Imbalance_Ratio_Flipping_Reflipping {
 		for(int alg = 0; alg < algorithms.length; alg++)
 			algorithmsFilename[alg] = algorithms[alg].replaceAll(" ", "").replaceAll("moa.classifiers.meta.imbalanced.", "").replaceAll("moa.classifiers.meta.", "").replaceAll("moa.classifiers.trees.", "").replaceAll("moa.classifiers.ann.meta.", "").replaceAll("moa.classifiers.active.", "").replaceAll("[()]", "");
 
-		String resultsPath = "D:/DataStreams-Imbalanced/flipping_replipping_IR/";
+		String resultsPath = "D:/DataStreams-Imbalanced/binary/flipping_replipping_IR/";
 
 		// Executables
 		System.out.println("===== Executables =====");

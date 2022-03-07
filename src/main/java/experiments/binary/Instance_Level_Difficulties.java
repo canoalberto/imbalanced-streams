@@ -541,7 +541,7 @@ public class Instance_Level_Difficulties {
 		for(int alg = 0; alg < algorithms.length; alg++)
 			algorithmsFilename[alg] = algorithms[alg].replaceAll(" ", "").replaceAll("moa.classifiers.meta.imbalanced.", "").replaceAll("moa.classifiers.meta.", "").replaceAll("moa.classifiers.trees.", "").replaceAll("moa.classifiers.ann.meta.", "").replaceAll("moa.classifiers.active.", "").replaceAll("[()]", "");
 
-		String resultsPath = "D:/DataStreams-Imbalanced/instance_level_difficulties/";
+		String resultsPath = "D:/DataStreams-Imbalanced/binary/instance_level_difficulties/";
 
 		// Executables
 		System.out.println("===== Executables =====");
