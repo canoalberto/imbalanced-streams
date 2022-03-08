@@ -1,5 +1,8 @@
 language: java
 
-jdk: oraclejdk11
+jdk: openjdk11
 
 script: mvn package -DskipTests=true
+
+notifications:
+  email: false
