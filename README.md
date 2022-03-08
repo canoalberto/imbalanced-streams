@@ -85,7 +85,7 @@ ARFF files are available to download for [binary class datasets](https://drive.g
 <img src="https://people.vcu.edu/~acano/imbalanced-streams/images/BC_overall_barplot.png" alt="Binary class experiments: spiral barplot" width="100%"/>
 </td>
 <td width=50%>
-<img src="https://people.vcu.edu/~acano/imbalanced-streams/images/MC_overall_scatter.png" alt="Multi-class experiments: spiral barplot" width="100%"/>
+<img src="https://people.vcu.edu/~acano/imbalanced-streams/images/MC_overall_barplot.png" alt="Multi-class experiments: spiral barplot" width="100%"/>
 </td>
 </tr>
 </table>
