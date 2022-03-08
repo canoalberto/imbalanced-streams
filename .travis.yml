@@ -2,6 +2,8 @@ language: java
 
 jdk: openjdk11
 
+ignore: README.md
+
 script: mvn package -DskipTests=true
 
 notifications:

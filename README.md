@@ -1,6 +1,6 @@
 # Experimental review on imbalanced data streams
 
-[![Build Status](https://travis-ci.com/canoalberto/imbalanced-streams.svg?branch=master)](https://travis-ci.com/canoalberto/imbalanced-streams)
+[![Build Status](https://app.travis-ci.com/canoalberto/imbalanced-streams.svg?token=SjdT1p8rShU4CRowEYiB&branch=master)](https://travis-ci.com/github/canoalberto/imbalanced-streams)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 This repository provides the source code, algorithms, experimental setup, and results for the experimental review on imbalanced data streams submitted for publication to the journal Machine Learning.
