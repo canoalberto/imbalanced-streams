@@ -92,7 +92,7 @@ ARFF files are available to download for [binary class datasets](https://drive.g
 
 ## Citation
 ```
-@article{Aguiar:Cano:Krawczyk:2022:imbalanced-streams,
+@article{Aguiar:2022:imbalanced-streams,
   author={Aguiar, Gabriel and Krawczyk, Bartosz and Cano, Alberto},
   journal={Machine Learning}, 
   title={A survey on imbalance data streams: taxonomy and empirical study}, 
