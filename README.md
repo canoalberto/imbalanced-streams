@@ -1,5 +1,7 @@
-
 # Experimental review on imbalanced data streams
+
+[![Build Status](https://travis-ci.com/canoalberto/imbalanced-streams.svg?branch=master)](https://travis-ci.com/canoalberto/imbalanced-streams)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 This repository provides the source code, algorithms, experimental setup, and results for the experimental review on imbalanced data streams submitted for publication to the journal Machine Learning.
 
@@ -70,11 +72,23 @@ Complete csv results for all experiments, algorithms, and benchmarks are availab
 
 ARFF files are available to download for [binary class datasets](https://drive.google.com/file/d/1N90LJdFVK_Fy-Z3a45nY26PAiOZTQBsQ/view?usp=sharing), [multi-class datasets](https://drive.google.com/file/d/19F7krux2PnhFJzM7lOwNOLT26NHnZXbo/view?usp=sharing), and [semi-synthetic datasets](https://drive.google.com/file/d/1WogmLnHrBL3zdExegZJAl-nxuO6NCVxZ/view?usp=sharing).
 
-<img src="https://people.vcu.edu/~acano/imbalanced-streams/images/BC_overall_scatter.png" alt="Binary class experiments: G-Mean vs Kappa" width="450"/>
-<img src="https://people.vcu.edu/~acano/imbalanced-streams/images/MC_overall_scatter.png" alt="Multi-class experiments: PMAUC vs Kappa" width="450"/>
-
-<img src="https://people.vcu.edu/~acano/imbalanced-streams/images/BC_overall_barplot.png" alt="Binary class experiments: spiral barplot" width="450"/>
-<img src="https://people.vcu.edu/~acano/imbalanced-streams/images/MC_overall_scatter.png" alt="Multi-class experiments: spiral barplot" width="450"/>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width=50%>
+<img src="https://people.vcu.edu/~acano/imbalanced-streams/images/BC_overall_scatter.png" alt="Binary class experiments: G-Mean vs Kappa" width="100%"/>
+</td>
+<td width=50%>
+<img src="https://people.vcu.edu/~acano/imbalanced-streams/images/MC_overall_scatter.png" alt="Multi-class experiments: PMAUC vs Kappa" width="100%"/>
+</td>
+</tr>
+<td width=50%>
+<img src="https://people.vcu.edu/~acano/imbalanced-streams/images/BC_overall_barplot.png" alt="Binary class experiments: spiral barplot" width="100%"/>
+</td>
+<td width=50%>
+<img src="https://people.vcu.edu/~acano/imbalanced-streams/images/MC_overall_scatter.png" alt="Multi-class experiments: spiral barplot" width="100%"/>
+</td>
+</tr>
+</table>
 
 ## Citation
 ```
