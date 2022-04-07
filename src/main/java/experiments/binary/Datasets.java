@@ -85,8 +85,10 @@ public class Datasets {
 		System.out.println("===== Results =====");
 		
 		Utils.metric("Kappa", "averaged", resultsPath, algorithmsFilename, datasets);
-		Utils.metric("G-Mean", "averaged", resultsPath, algorithmsFilename, datasets);
 		Utils.metric("AUC", "averaged", resultsPath, algorithmsFilename, datasets);
+		Utils.metric("sAUC", "averaged", resultsPath, algorithmsFilename, datasets);
+		Utils.metric("G-Mean", "averaged", resultsPath, algorithmsFilename, datasets);
+		Utils.metric("Accuracy", "averaged", resultsPath, algorithmsFilename, datasets);
 		
 		Utils.metric("evaluation time (cpu seconds)", "last", resultsPath, algorithmsFilename, datasets);
 		Utils.metric("model cost (RAM-Hours)", "averaged", resultsPath, algorithmsFilename, datasets);	

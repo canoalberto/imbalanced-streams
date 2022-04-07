@@ -67,6 +67,10 @@ public class Semisynthetic {
 		
 		Utils.metric("Kappa", "averaged", resultsPath, algorithmsFilename, datasets);
 		Utils.metric("PMAUC", "averaged", resultsPath, algorithmsFilename, datasets);
+		Utils.metric("WMAUC", "averaged", resultsPath, algorithmsFilename, datasets);
+		Utils.metric("EWMAUC", "averaged", resultsPath, algorithmsFilename, datasets);
+		Utils.metric("Accuracy", "averaged", resultsPath, algorithmsFilename, datasets);
+		Utils.metric("G-Mean", "averaged", resultsPath, algorithmsFilename, datasets);
 		
 		Utils.metric("evaluation time (cpu seconds)", "last", resultsPath, algorithmsFilename, datasets);
 		Utils.metric("model cost (RAM-Hours)", "averaged", resultsPath, algorithmsFilename, datasets);	

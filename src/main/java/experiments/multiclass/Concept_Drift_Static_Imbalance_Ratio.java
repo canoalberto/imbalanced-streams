@@ -141,6 +141,10 @@ public class Concept_Drift_Static_Imbalance_Ratio {
 		
 		Utils.metric("Kappa", "averaged", resultsPath, algorithmsFilename, generatorsFilename);
 		Utils.metric("PMAUC", "averaged", resultsPath, algorithmsFilename, generatorsFilename);
+		Utils.metric("WMAUC", "averaged", resultsPath, algorithmsFilename, generatorsFilename);
+		Utils.metric("EWMAUC", "averaged", resultsPath, algorithmsFilename, generatorsFilename);
+		Utils.metric("Accuracy", "averaged", resultsPath, algorithmsFilename, generatorsFilename);
+		Utils.metric("G-Mean", "averaged", resultsPath, algorithmsFilename, generatorsFilename);
 		
 		Utils.metric("evaluation time (cpu seconds)", "last", resultsPath, algorithmsFilename, generatorsFilename);
 		Utils.metric("model cost (RAM-Hours)", "averaged", resultsPath, algorithmsFilename, generatorsFilename);	

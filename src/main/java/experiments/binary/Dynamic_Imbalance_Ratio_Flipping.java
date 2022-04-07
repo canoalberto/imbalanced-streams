@@ -510,8 +510,10 @@ public class Dynamic_Imbalance_Ratio_Flipping {
 		System.out.println("===== Results =====");
 		
 		Utils.metric("Kappa", "averaged", resultsPath, algorithmsFilename, generatorsFilename);
-		Utils.metric("G-Mean", "averaged", resultsPath, algorithmsFilename, generatorsFilename);
 		Utils.metric("AUC", "averaged", resultsPath, algorithmsFilename, generatorsFilename);
+		Utils.metric("sAUC", "averaged", resultsPath, algorithmsFilename, generatorsFilename);
+		Utils.metric("G-Mean", "averaged", resultsPath, algorithmsFilename, generatorsFilename);
+		Utils.metric("Accuracy", "averaged", resultsPath, algorithmsFilename, generatorsFilename);
 		
 		Utils.metric("evaluation time (cpu seconds)", "last", resultsPath, algorithmsFilename, generatorsFilename);
 		Utils.metric("model cost (RAM-Hours)", "averaged", resultsPath, algorithmsFilename, generatorsFilename);	

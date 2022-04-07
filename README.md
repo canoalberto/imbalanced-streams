@@ -1,9 +1,9 @@
-# Experimental review on imbalanced data streams
+# A survey on learning from imbalanced data streams: taxonomy, challenges, empirical study, and reproducible experimental framework
 
 [![Build Status](https://app.travis-ci.com/canoalberto/imbalanced-streams.svg?token=SjdT1p8rShU4CRowEYiB&branch=master)](https://travis-ci.com/github/canoalberto/imbalanced-streams)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
-This repository provides the source code, algorithms, experimental setup, and results for the experimental review on imbalanced data streams submitted for publication to the journal Machine Learning.
+This repository provides the source code, algorithms, experimental setup, and results for the experimental review on imbalanced data streams submitted for publication to the journal Machine Learning. The manuscript preprint is available at [arXiv](https://people.vcu.edu/~acano/imbalanced-streams).
 
 ## Experiments
 
@@ -62,11 +62,15 @@ The package  `src/main/java/moa/classifiers` contains 24 state-of-the-art algori
 
 ## Evaluators
 
-The package `src/main/java/moa/evaluation` contains the performance evaluators. `ImbalancedPerformanceEvaluator` is used for binary class experiments reporting G-Mean, AUC, and Kappa metrics. `MultiClassImbalancedPerformanceEvaluator` is used for multi-class experiments reporting G-Mean, PMAUC, and Kappa metrics. The evaluators also report the runtime (seconds), memory consumption (RAM-Hours), and the complete confusion matrix for posterior analysis.
+The package `src/main/java/moa/evaluation` contains the performance evaluators.
+
+`ImbalancedPerformanceEvaluator` is used for binary class experiments reporting G-Mean, AUC, and Kappa metrics.
+
+`MultiClassImbalancedPerformanceEvaluator` is used for multi-class experiments reporting G-Mean, PMAUC, and Kappa metrics. The evaluators also report the runtime (seconds), memory consumption (RAM-Hours), and the complete confusion matrix for posterior analysis.
 
 ## Results
 
-This [website](https://people.vcu.edu/~acano/imbalanced-streams) provides user-interactive plots to display the metrics over time for each experiment, algorithm, and benchmark.
+This [website](https://people.vcu.edu/~acano/imbalanced-streams) provides interactive plots to display the metrics over time and result tables for each experiment, algorithm, and benchmark.
 
 Complete csv results for all experiments, algorithms, and benchmarks are available to [download](https://people.vcu.edu/~acano/imbalanced-streams/results-csv.zip) to facilitate the transparency, reproducibility, and extendability of the experimental study.
 
@@ -94,8 +98,8 @@ ARFF files are available to download for [binary class datasets](https://drive.g
 ```
 @article{Aguiar:2022:imbalanced-streams,
   author={Aguiar, Gabriel and Krawczyk, Bartosz and Cano, Alberto},
-  journal={Machine Learning}, 
-  title={A survey on imbalance data streams: taxonomy and empirical study}, 
+  title={A survey on learning from imbalanced data streams: taxonomy, challenges, empirical study, and reproducible experimental framework},
+  journal={Machine Learning},  
   year={2022},
   pages={}
 }
