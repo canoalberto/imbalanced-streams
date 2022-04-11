@@ -3,7 +3,7 @@
 [![Build Status](https://app.travis-ci.com/canoalberto/imbalanced-streams.svg?token=SjdT1p8rShU4CRowEYiB&branch=master)](https://travis-ci.com/github/canoalberto/imbalanced-streams)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
-This repository provides the source code, algorithms, experimental setup, and results for the experimental review on imbalanced data streams submitted for publication to the journal Machine Learning. The manuscript preprint is available at [arXiv](https://people.vcu.edu/~acano/imbalanced-streams).
+This repository provides the source code, algorithms, experimental setup, and results for the experimental review on imbalanced data streams submitted for publication to the journal Machine Learning. The manuscript preprint is available at [arXiv](https://arxiv.org/abs/2204.03719).
 
 ## Experiments
 
@@ -96,11 +96,12 @@ ARFF files are available to download for [binary class datasets](https://drive.g
 
 ## Citation
 ```
-@article{Aguiar:2022:imbalanced-streams,
+@misc{aguiar2022survey,
   author={Aguiar, Gabriel and Krawczyk, Bartosz and Cano, Alberto},
   title={A survey on learning from imbalanced data streams: taxonomy, challenges, empirical study, and reproducible experimental framework},
-  journal={Machine Learning},  
   year={2022},
-  pages={}
+  eprint={2204.03719},
+  archivePrefix={arXiv},
+  primaryClass={cs.LG}
 }
 ```
