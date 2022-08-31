@@ -5,6 +5,8 @@
 
 This repository provides the source code, algorithms, experimental setup, and results for the experimental review on imbalanced data streams submitted for publication to the journal Machine Learning. The manuscript preprint is available at [arXiv](https://arxiv.org/abs/2204.03719).
 
+This [website](https://people.vcu.edu/~acano/imbalanced-streams) provides interactive plots to display the metrics over time and result tables for each experiment, algorithm, and benchmark.
+
 ## Experiments
 
 The package `src/main/java/experiments` provides the scripts for binary and multi-class experiments. It comprises the following experiments:
