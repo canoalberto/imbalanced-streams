@@ -96,6 +96,22 @@ ARFF files are available to download for [binary class datasets](https://drive.g
 </tr>
 </table>
 
+## How to add a new algorithm, generator, or evaluator in the framework
+
+We use the [MOA framework](https://moa.cms.waikato.ac.nz/) and its class hierarchy. Adding a new algorithm, generator, or evaluator is the same as adding it in MOA (see [MOA documentation](https://moa.cms.waikato.ac.nz/documentation/)).
+
+First, import the source code to your favorite IDE (Eclipse, VS code, IntelliJ, etc) using Git.
+
+To add a new algorithm, e.g. MyAlgorithmName, create a new Java file at `src/main/java/moa/classifiers/MyAlgorithmName.java`. The class must extend the `AbstractClassifier` class and implement the `public void trainOnInstanceImpl(Instance instance)` and `public double[] getVotesForInstance(Instance instance)` methods.
+
+To add a new generator, e.g. MyGeneratorName, create a new Java file at `src/main/java/moa/streams/generators/MyGeneratorName.java`. The class must implement the `InstanceStream` interface and the `public InstanceExample nextInstance()` method.
+
+To add a new performance metric you can edit an existing evaluator (e.g. `src/main/java/moa/evaluation/ImbalancedPerformanceEvaluator.java`) to add the metric calculation. Alternatively, you can add a new evaluator, e.g. MyEvaluatorName. To do so, create a new Java file at `src/main/java/moa/evaluation/MyEvaluatorName.java`. The class must implement the `ClassificationPerformanceEvaluator` interface, and the `public void addResult(Example<Instance> exampleInstance, double[] classVotes)` and `public Measurement[] getPerformanceMeasurements()` methods.
+
+The next step is to compile the source code using Maven (pom.xml file). Use the command `mvn package` or your IDE options to build the jar file `target/imbalanced-streams-1.0-jar-with-dependencies.jar`
+
+Finally, use any of the scripts provided at `src/main/java/experiments` for the different groups of experiments and add your algorithm, generator, or evaluator. These scripts will generate the command lines used to run the experiments.
+
 ## Citation
 ```
 @misc{aguiar2022survey,
