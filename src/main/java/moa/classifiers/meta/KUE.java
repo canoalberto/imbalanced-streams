@@ -1,7 +1,5 @@
 package moa.classifiers.meta;
 
-import java.util.Random;
-
 import com.github.javacliparser.IntOption;
 import com.yahoo.labs.samoa.instances.Instance;
 import com.yahoo.labs.samoa.instances.Instances;
@@ -98,16 +96,14 @@ public class KUE extends AbstractClassifier implements MultiClassClassifier {
 
 			useAttribute = new boolean[numClassifiers][numAtts];
 
-			Random r = new Random();
-
 			for(int i = 0; i < numClassifiers; i++)
 			{
 				int used = 0;
-				int numAttsSelected = 1 + r.nextInt(numAtts);
+				int numAttsSelected = 1 + this.classifierRandom.nextInt(numAtts);
 
 				while(used < numAttsSelected)
 				{
-					int index = r.nextInt(numAtts);
+					int index = this.classifierRandom.nextInt(numAtts);
 
 					if(useAttribute[i][index] == false)
 					{
@@ -199,11 +195,9 @@ public class KUE extends AbstractClassifier implements MultiClassClassifier {
 
 			computeKappa();
 
-			Random r = new Random();
 			int numAtts = this.getModelContext().numAttributes() - 1;
 
 			numberComponentsReplaced = 0;
-			
 
 			for(int i = 0; i < newmemberCountOption.getValue(); i++)
 			{
@@ -211,12 +205,12 @@ public class KUE extends AbstractClassifier implements MultiClassClassifier {
 				Classifier addedClassifier = this.candidate.copy();
 
 				int used = 0;
-				int numAttsSelected = 1 + r.nextInt(numAtts);
+				int numAttsSelected = 1 + this.classifierRandom.nextInt(numAtts);
 				boolean[] newAttributeArray = new boolean[numAtts];
 
 				while(used < numAttsSelected)
 				{
-					int index = r.nextInt(numAtts);
+					int index = this.classifierRandom.nextInt(numAtts);
 
 					if(newAttributeArray[index] == false)
 					{
@@ -328,7 +322,7 @@ public class KUE extends AbstractClassifier implements MultiClassClassifier {
 	 *            Classifier being trained.
 	 */
 	private void trainOnChunk(Classifier classifierToTrain, boolean[] useAttribute) {
-		Random r = new Random();
+		
 		for (int num = 0; num < this.chunkSizeOption.getValue(); num++) {
 
 			Instance copy = this.currentChunk.instance(num).copy();
@@ -337,7 +331,7 @@ public class KUE extends AbstractClassifier implements MultiClassClassifier {
 				if(useAttribute[i] == false)
 					copy.setValue(i, 0);
 
-			int k = MiscUtils.poisson(1.0, r);
+			int k = MiscUtils.poisson(1.0, this.classifierRandom);
 			if (k > 0) {
 				copy.setWeight(copy.weight() * k);
 				classifierToTrain.trainOnInstance(copy);

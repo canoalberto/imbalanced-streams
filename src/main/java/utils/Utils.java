@@ -28,9 +28,9 @@ public class Utils {
 
 				String filename = algorithmFileNames[alg] + "-" + generatorFileName + ".csv";
 				
-				if(new File(path + filename).exists())
+				if(new File(path + "/" + filename).exists())
 				{
-					BufferedReader br = new BufferedReader(new FileReader(new File(path + filename)));
+					BufferedReader br = new BufferedReader(new FileReader(new File(path + "/" + filename)));
 					
 					String line;
 					line = br.readLine(); // header
@@ -43,7 +43,7 @@ public class Utils {
 							targetColumn = i;
 					
 					if(targetColumn == -1) {
-						System.out.println("Column \"" + metricName + "\" not found on file " + (path + filename));
+						System.out.println("Column \"" + metricName + "\" not found on file " + (path + "/" + filename));
 					}
 					
 					while((line = br.readLine()) != null)
@@ -64,7 +64,7 @@ public class Utils {
 				}
 				else
 				{
-					missingFiles.add(filename);
+					missingFiles.add(path + "/" + filename);
 				}
 
 				if(outcome.equalsIgnoreCase("averaged"))

@@ -116,14 +116,15 @@ public class Static_Imbalance_Ratio {
 		for(int alg = 0; alg < algorithms.length; alg++)
 			algorithmsFilename[alg] = algorithms[alg].replaceAll(" ", "").replaceAll("moa.classifiers.meta.imbalanced.", "").replaceAll("moa.classifiers.meta.", "").replaceAll("moa.classifiers.trees.", "").replaceAll("moa.classifiers.ann.meta.", "").replaceAll("moa.classifiers.active.", "").replaceAll("[()]", "");
 
+		int seed = 123456789;
 		
-		String resultsPath = "D:/DataStreams-Imbalanced/binary/static_IR/";
-
+		String resultsPath = "results/binary/static_IR/" + seed;
+		
 		// Executables
 		System.out.println("===== Executables =====");
 		for(int gen = 0; gen < generators.length; gen++) {
 			for(int alg = 0; alg < algorithms.length; alg++) {
-				String VMargs = "-Xms8g -Xmx1024g";
+				String VMargs = "-Xms8g -Xmx128g -XX:ParallelGCThreads=12";
 				String jarFile = "target/imbalanced-streams-1.0-jar-with-dependencies.jar";
 
 				System.out.println("java " + VMargs + " -javaagent:sizeofag-1.0.4.jar -cp " + jarFile + " "
@@ -131,8 +132,8 @@ public class Static_Imbalance_Ratio {
 						+ " -e \"(ImbalancedPerformanceEvaluator -w 500)\""
 						+ " -s \"(" + generators[gen] + ")\"" 
 						+ " -l \"(" + algorithms[alg] + ")\""
-						+ " -i 200000 -f 500"
-						+ " -d " + resultsPath + algorithmsFilename[alg] + "-" + generatorsFilename[gen] + ".csv");
+						+ " -i 200000 -f 500" + " -r " + seed
+						+ " -d " + resultsPath + "/" + algorithmsFilename[alg] + "-" + generatorsFilename[gen] + ".csv");
 			}
 		}
 

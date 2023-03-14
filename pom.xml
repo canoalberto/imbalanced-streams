@@ -48,17 +48,35 @@
 			<artifactId>commons-math3</artifactId>
 			<version>3.6.1</version>
 		</dependency>
+		<!-- Add the following packages for CUDA 11.6 GPU on ESOS-ELM -->
+		<!--
+		<dependency>
+		    <groupId>org.nd4j</groupId>
+		    <artifactId>nd4j-cuda-11.6</artifactId>
+		    <version>1.0.0-M2.1</version>
+		</dependency>
+		<dependency>
+    	<groupId>org.nd4j</groupId>
+		    <artifactId>nd4j-cuda-11.6-platform</artifactId>
+		    <version>1.0.0-M2.1</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.nd4j</groupId>
+		    <artifactId>nd4j-cuda-11.6-preset</artifactId>
+		    <version>1.0.0-M2.1</version>
+		</dependency>
+		-->
 		<!-- Add -Djavacpp.platform=linux-x86_64 to the mvn package parameters to reduce build size -->
 		<dependency>
 			<groupId>org.nd4j</groupId>
 			<artifactId>nd4j-native</artifactId>
-			<version>1.0.0-M1.1</version>
+			<version>1.0.0-M2.1</version>
 		</dependency>
 		<dependency>
 			<groupId>org.nd4j</groupId>
 			<artifactId>nd4j-native-platform</artifactId>
-			<version>1.0.0-M1.1</version>
-		</dependency>
+			<version>1.0.0-M2.1</version>
+		</dependency>		
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-simple</artifactId>

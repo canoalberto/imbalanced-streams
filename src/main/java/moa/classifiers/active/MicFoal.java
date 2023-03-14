@@ -17,10 +17,8 @@ import moa.options.ClassOption;
 import com.github.javacliparser.FloatOption;
 import com.github.javacliparser.IntOption;
 
-
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Random;
 
 import moa.evaluation.BasicClassificationPerformanceEvaluator;
 
@@ -69,11 +67,6 @@ public class MicFoal extends AbstractClassifier implements MultiClassClassifier,
             'h', "if F1 score is higher than this threshold, the label cost budget will be reduced.",
             0.9, 0.0, 1.0);
 
-    public IntOption seedOption = new IntOption("randomseed",
-            's', "Seed for classifierRandom.",
-            0, 0, Integer.MAX_VALUE);     
-    
-  	
     protected Learner supervisedLearner;
     protected long instancesSeen;
     protected int subspaceSize;
@@ -89,8 +82,6 @@ public class MicFoal extends AbstractClassifier implements MultiClassClassifier,
     protected double budget,randRatio;
     protected double threshold;
     
-	protected Random rd1 = new Random();
-	
 	protected int labelingcost;
 	public int[] randImbalanceCounter;
 	protected int[] truelabelCounter; 
@@ -451,12 +442,6 @@ public class MicFoal extends AbstractClassifier implements MultiClassClassifier,
        		this.randomLabelSlidingWin[i]=-1; 
        	}
 
-        int randomSeed =this.seedOption.getValue();
-        if(randomSeed>0)
-        	this.classifierRandom = new Random(randomSeed);  
-        else
-        	this.classifierRandom = new Random(); 
-        
        	this.numberOfClasses = instance.numClasses();
        	randImbalanceCounter= new int[this.numberOfClasses];
        	truePositiveCounter= new int[this.numberOfClasses];

@@ -541,13 +541,15 @@ public class Instance_Level_Difficulties {
 		for(int alg = 0; alg < algorithms.length; alg++)
 			algorithmsFilename[alg] = algorithms[alg].replaceAll(" ", "").replaceAll("moa.classifiers.meta.imbalanced.", "").replaceAll("moa.classifiers.meta.", "").replaceAll("moa.classifiers.trees.", "").replaceAll("moa.classifiers.ann.meta.", "").replaceAll("moa.classifiers.active.", "").replaceAll("[()]", "");
 
-		String resultsPath = "D:/DataStreams-Imbalanced/binary/instance_level_difficulties/";
-
+		int seed = 123456789;
+		
+		String resultsPath = "results/binary/instance_level_difficulties/" + seed;
+		
 		// Executables
 		System.out.println("===== Executables =====");
 		for(int gen = 0; gen < generators.length; gen++) {
 			for(int alg = 0; alg < algorithms.length; alg++) {
-				String VMargs = "-Xms8g -Xmx1024g";
+				String VMargs = "-Xms8g -Xmx128g -XX:ParallelGCThreads=12";
 				String jarFile = "target/imbalanced-streams-1.0-jar-with-dependencies.jar";
 
 				System.out.println("java " + VMargs + " -javaagent:sizeofag-1.0.4.jar -cp " + jarFile + " "
@@ -555,8 +557,8 @@ public class Instance_Level_Difficulties {
 						+ " -e \"(ImbalancedPerformanceEvaluator -w 500)\""
 						+ " -s \"(" + generators[gen] + ")\"" 
 						+ " -l \"(" + algorithms[alg] + ")\""
-						+ " -i 200000 -f 500"
-						+ " -d " + resultsPath + algorithmsFilename[alg] + "-" + generatorsFilename[gen] + ".csv");
+						+ " -i 200000 -f 500" + " -r " + seed
+						+ " -d " + resultsPath + "/" + algorithmsFilename[alg] + "-" + generatorsFilename[gen] + ".csv");
 			}
 		}
 

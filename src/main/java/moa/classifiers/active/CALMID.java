@@ -68,10 +68,6 @@ CapabilitiesHandler {
             'w', "Size of window for imbalance sampling.",
             500, 100, Integer.MAX_VALUE);
     
-    public IntOption seedOption = new IntOption("randomseed",
-            's', "Seed for classifierRandom.",
-            0, 0, Integer.MAX_VALUE); 
-    
     protected   class Sample implements Comparable<Sample>  
     {  
     	int SequenceNo;  //the position of this sample in stream
@@ -106,8 +102,6 @@ CapabilitiesHandler {
     protected double budget,randRatio;
     protected double threshold;
     
-	protected Random rd1 = new Random();
-	
 	protected int labelingcost;
 	protected int processedinstance;
 	protected double marginvalue;
@@ -210,12 +204,6 @@ CapabilitiesHandler {
        	}
     	this.posWindow = 0;
     	this.qtyNaNs = sizeWindow;  
-    	
-        int t1 =this.seedOption.getValue();
-        if(t1>0)
-        	this.classifierRandom = new Random(t1);  
-        else
-        	this.classifierRandom = new Random();          
     }
 
     @Override
