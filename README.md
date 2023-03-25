@@ -74,7 +74,15 @@ The package `src/main/java/moa/evaluation` contains the performance evaluators.
 
 This [website](https://people.vcu.edu/~acano/imbalanced-streams) provides interactive plots to display the metrics over time and result tables for each experiment, algorithm, and benchmark.
 
-Complete csv results for all experiments, algorithms, and benchmarks are available to [download](https://people.vcu.edu/~acano/imbalanced-streams/results-csv.zip) to facilitate the transparency, reproducibility, and extendability of the experimental study.
+Complete csv results for all experiments, algorithms, and benchmarks reported on the manuscript are available to [download](https://people.vcu.edu/~acano/imbalanced-streams/results-csv.zip) to facilitate the transparency, reproducibility, and extendability of the experimental study.
+
+Additional complete csv results are provided for 5 seeds:
+
+- [Complete csv results for seed 123456789](https://people.vcu.edu/~acano/imbalanced-streams/results-csv-123456789.zip)
+- [Complete csv results for seed 234567891](https://people.vcu.edu/~acano/imbalanced-streams/results-csv-234567891.zip)
+- [Complete csv results for seed 345678912](https://people.vcu.edu/~acano/imbalanced-streams/results-csv-345678912.zip)
+- [Complete csv results for seed 456789123](https://people.vcu.edu/~acano/imbalanced-streams/results-csv-456789123.zip)
+- [Complete csv results for seed 567891234](https://people.vcu.edu/~acano/imbalanced-streams/results-csv-567891234.zip)
 
 ARFF files are available to download for [binary class datasets](https://drive.google.com/file/d/1N90LJdFVK_Fy-Z3a45nY26PAiOZTQBsQ/view?usp=sharing), [multi-class datasets](https://drive.google.com/file/d/19F7krux2PnhFJzM7lOwNOLT26NHnZXbo/view?usp=sharing), and [semi-synthetic datasets](https://drive.google.com/file/d/1WogmLnHrBL3zdExegZJAl-nxuO6NCVxZ/view?usp=sharing).
 
