@@ -74,9 +74,9 @@ The package `src/main/java/moa/evaluation` contains the performance evaluators.
 
 This [website](https://people.vcu.edu/~acano/imbalanced-streams) provides interactive plots to display the metrics over time and result tables for each experiment, algorithm, and benchmark.
 
-Complete csv results for all experiments, algorithms, and benchmarks reported on the manuscript are available to [download](https://people.vcu.edu/~acano/imbalanced-streams/results-csv.zip) to facilitate the transparency, reproducibility, and extendability of the experimental study.
+Complete csv results (median for 5 seeds) for all experiments, algorithms, and benchmarks reported on the manuscript are available to [download](https://people.vcu.edu/~acano/imbalanced-streams/results-csv-median.zip) to facilitate the transparency, reproducibility, and extendability of the experimental study.
 
-Additional complete csv results are provided for 5 seeds:
+Complete csv results are provided for 5 seeds:
 
 - [Complete csv results for seed 123456789](https://people.vcu.edu/~acano/imbalanced-streams/results-csv-123456789.zip)
 - [Complete csv results for seed 234567891](https://people.vcu.edu/~acano/imbalanced-streams/results-csv-234567891.zip)
