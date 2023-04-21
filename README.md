@@ -89,17 +89,17 @@ ARFF files are available to download for [binary class datasets](https://drive.g
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
 <td width=50%>
-<img src="https://people.vcu.edu/~acano/imbalanced-streams/images/BC_overall_scatter.png" alt="Binary class experiments: G-Mean vs Kappa" width="100%"/>
+<img src="https://people.vcu.edu/~acano/imbalanced-streams/images/BC_overall_scatter_.png" alt="Binary class experiments: G-Mean vs Kappa" width="100%"/>
 </td>
 <td width=50%>
-<img src="https://people.vcu.edu/~acano/imbalanced-streams/images/MC_overall_scatter.png" alt="Multi-class experiments: PMAUC vs Kappa" width="100%"/>
+<img src="https://people.vcu.edu/~acano/imbalanced-streams/images/MC_overall_scatter_.png" alt="Multi-class experiments: PMAUC vs Kappa" width="100%"/>
 </td>
 </tr>
 <td width=50%>
-<img src="https://people.vcu.edu/~acano/imbalanced-streams/images/BC_overall_barplot.png" alt="Binary class experiments: spiral barplot" width="100%"/>
+<img src="https://people.vcu.edu/~acano/imbalanced-streams/images/BC_overall_barplot_.png" alt="Binary class experiments: spiral barplot" width="100%"/>
 </td>
 <td width=50%>
-<img src="https://people.vcu.edu/~acano/imbalanced-streams/images/MC_overall_barplot.png" alt="Multi-class experiments: spiral barplot" width="100%"/>
+<img src="https://people.vcu.edu/~acano/imbalanced-streams/images/MC_overall_barplot_.png" alt="Multi-class experiments: spiral barplot" width="100%"/>
 </td>
 </tr>
 </table>
