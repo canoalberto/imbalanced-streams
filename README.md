@@ -122,10 +122,12 @@ Finally, use any of the scripts provided at `src/main/java/experiments` for the 
 
 ## Citation
 ```
-@article{aguiar2022survey,
+@article{aguiar2024survey,
   author={Aguiar, Gabriel and Krawczyk, Bartosz and Cano, Alberto},
   title={A survey on learning from imbalanced data streams: taxonomy, challenges, empirical study, and reproducible experimental framework},
   journal={Machine Learning},
-  year={2023}
+  volume={113},
+  pages={4165-4243},
+  year={2024}
 }
 ```
